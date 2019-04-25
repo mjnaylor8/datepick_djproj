@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		{% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
+		{{ form.media }}
+        
+    </head>
+    <body>
+        <h1>Check date change event</h1>
+        <form action="" method="get" class="form" id="frm_id">
+            {% bootstrap_form form layout='horizontal' %}
+        </form>
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                console.log("hello world");
+                $("#id_begindate").on("dp_1.change", function() {console.log("Date has changed!")} );
+                $("#id_begindate").on("change", function(){console.log("Date has changed!")});
+                $("#id_begindate").change(function(){console.log("Date has changed!")});
+                
+            });
+        </script>
+    </body>
+</html>
