@@ -25,9 +25,12 @@
         <script>
             $(document).ready(function () {
                 console.log("hello world");
-                $("#id_begindate").on("dp_1.change", function() {console.log("Date has changed!")} );
-                $("#id_begindate").on("change", function(){console.log("Date has changed!")});
-                $("#id_begindate").change(function(){console.log("Date has changed!")});
+                $("#id_begindate").on("dp.change", function() {console.log("Date has changed!")} );
+                $("#id_begindate").on("dp.change", function(event) {
+                    $("#id_enddate").data("DateTimePicker").date(event.date);
+                });
+                // $("#id_begindate").on("change", function(){console.log("Date has changed!")});
+                // $("#id_begindate").change(function(){console.log("Date has changed!")});
                 
             });
         </script>
