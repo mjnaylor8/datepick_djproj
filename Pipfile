@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 django-bootstrap-datepicker-plus = "*"
 django-bootstrap4 = "*"
+django-sekizai = "*"
 
 [dev-packages]
 python-language-server = {version = "*"}
